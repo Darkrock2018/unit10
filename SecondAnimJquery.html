@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Appending Text with JQuery </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var newtext = "Append this text.";
+        var newlisttext = "List text appended.";
+        $(document).ready(function () {//Begin JQUERY
+            $("#appendText").click(function () {
+                $("p").append(document.createTextNode(newtext));
+            })
+            $("#appendList").click(function () {
+                $("li").append(document.createTextNode(newlisttext));
+            })
+        })
+    </script>
+</head>
+<body>
+    
+    <p> This is a paragraph. </p>
+    <p> This is another paragraph. </p>
+
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ol>
+
+    <button id="appendText"> Append Text </button>
+    <button id="appendList"> Append List Items </button>
+</body>
+</html>
